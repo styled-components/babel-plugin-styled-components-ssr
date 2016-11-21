@@ -1,0 +1,31 @@
+{
+  "version": "0.1.1",
+  "name": "babel-plugin-styled-components-ssr",
+  "description": "Add server-side rendering support to styled-components",
+  "repository": "https://github.com/styled-components/babel-plugin-styled-components-ssr",
+  "author": "Max Stoiber",
+  "main": "lib/index.js",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "jest": "^17.0.3"
+  },
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "babel src -d lib",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "styled-components",
+    "css-in-js",
+    "babel-plugin",
+    "server-side rendering",
+    "ssr"
+  ],
+  "dependencies": {
+    "babel-template": "^6.16.0"
+  }
+}
